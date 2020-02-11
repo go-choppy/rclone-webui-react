@@ -70,7 +70,7 @@ class RemoteExplorerLayout extends React.Component {
             <ErrorBoundary>
                 <Row className={"d-none d-md-block"} data-test="remoteExplorerLayout">
 
-                    {distractionFreeMode && <div className="clearfix float-right">
+                    {distractionFreeMode && <div className="clearfix float-right fixed">
                         <Button color={"success"} className={"ml-2"}
                                 onClick={this.toggleDistractionFreeMode}><i className="fa fa-arrows"/></Button>
                     </div>}
@@ -91,14 +91,14 @@ class RemoteExplorerLayout extends React.Component {
                                         onClick={() => this.changeLayout(2, "side")}>
                                     2 - side by side
                                 </Button>
-                                <Button color={"primary"} className={"ml-2"}
+                                {/* <Button color={"primary"} className={"ml-2"}
                                         onClick={() => this.changeLayout(3, "side")}>
                                     3 - side by side
                                 </Button>
                                 <Button color={"primary"} className={"ml-2"}
                                         onClick={() => this.changeLayout(4, "side")}>
                                     4 - side by side
-                                </Button>
+                                </Button> */}
                                 <Button color={"success"} className={"ml-2"}
                                         onClick={this.toggleDistractionFreeMode}><i className="fa fa-arrows"/>
                                 </Button>

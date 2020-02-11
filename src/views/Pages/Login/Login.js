@@ -124,7 +124,7 @@ class Login extends Component {
                 console.log(error);
                 this.setState({
                     connectionSuccess: false,
-                    error: "Error connecting. Please check username password and verify if rclone is working at the specified IP."
+                    error: "Error connecting. Please check username password and verify if smartcdp is working at the specified IP."
                 })
             })
         })

@@ -15,7 +15,7 @@ class Home extends React.Component {
         const ipAddress = localStorage.getItem(IP_ADDRESS_KEY);
         return (
             <div data-test="homeComponent">
-                <h2>Welcome to Rclone dashboard. </h2>
+                <h2>Welcome to SmartCDP dashboard. </h2>
                 <p>Begin by creating a new remote config from the left sidebar.</p>
 
 

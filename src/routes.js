@@ -18,7 +18,7 @@ const routes = [
     {path: '/showconfig', name: 'Configs', component: ShowConfig},
     {path: '/remoteExplorer/:remoteName/:remotePath', exact: true, name: 'Explorer', component: RemoteExplorerLayout},
     {path: '/remoteExplorer', name: 'Explorer', component: RemoteExplorerLayout},
-    {path: '/rcloneBackend', name: 'Rclone Backend', component: RCloneDashboard},
+    {path: '/rcloneBackend', name: 'SmartCDP Backend', component: RCloneDashboard},
 
 ];
 

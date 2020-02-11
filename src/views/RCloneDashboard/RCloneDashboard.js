@@ -17,7 +17,7 @@ function RCloneVersion({data, hasError}) {
                     <p><strong>Arch:</strong>{data.arch}</p>
                     <p><strong>goVersion:</strong>{data.goVersion}</p>
                     <p><strong>OS:</strong>{data.os}</p>
-                    <p><strong>Rclone version:</strong>{data.version}</p>
+                    <p><strong>SmartCDP version:</strong>{data.version}</p>
                     <p><strong>isGit:</strong>{data.isGit}</p>
                 </CardBody>
             </Card>

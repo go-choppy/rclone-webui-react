@@ -228,189 +228,189 @@ export const config = [
             }
         ]
     },
-    {
-        "Name": "b2",
-        "Description": "Backblaze B2",
-        "Prefix": "b2",
-        "Options": [
-            {
-                "Name": "account",
-                "Help": "Account ID or Application Key ID",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": true,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "key",
-                "Help": "Application Key",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": true,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "endpoint",
-                "Help": "Endpoint for the service.\nLeave blank normally.",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "test_mode",
-                "Help": "A flag string for X-Bz-Test-Mode header for debugging.\n\nThis is for debugging purposes only. Setting it to one of the strings\nbelow will cause b2 to return specific errors:\n\n  * \"fail_some_uploads\"\n  * \"expire_some_account_authorization_tokens\"\n  * \"force_cap_exceeded\"\n\nThese will be set in the \"X-Bz-Test-Mode\" header which is documented\nin the [b2 integrations checklist](https://www.backblaze.com/b2/docs/integration_checklist.html).",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 2,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "versions",
-                "Help": "Include old versions in directory listings.\nNote that when using this no file write operations are permitted,\nso you can't upload files or delete them.",
-                "Provider": "",
-                "Default": false,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "hard_delete",
-                "Help": "Permanently delete files on remote removal, otherwise hide files.",
-                "Provider": "",
-                "Default": false,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "upload_cutoff",
-                "Help": "Cutoff for switching to chunked upload.\n\nFiles above this size will be uploaded in chunks of \"--b2-chunk-size\".\n\nThis value should be set no larger than 4.657GiB (== 5GB).",
-                "Provider": "",
-                "Default": 209715200,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "chunk_size",
-                "Help": "Upload chunk size. Must fit in memory.\n\nWhen uploading large files, chunk the file into this size.  Note that\nthese chunks are buffered in memory and there might a maximum of\n\"--transfers\" chunks in progress at once.  5,000,000 Bytes is the\nminimum size.",
-                "Provider": "",
-                "Default": 100663296,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "disable_checksum",
-                "Help": "Disable checksums for large (\u003e upload cutoff) files",
-                "Provider": "",
-                "Default": false,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            }
-        ]
-    },
-    {
-        "Name": "box",
-        "Description": "Box",
-        "Prefix": "box",
-        "Options": [
-            {
-                "Name": "client_id",
-                "Help": "Box App Client Id.\nLeave blank normally.",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "client_secret",
-                "Help": "Box App Client Secret\nLeave blank normally.",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "upload_cutoff",
-                "Help": "Cutoff for switching to multipart upload (\u003e= 50MB).",
-                "Provider": "",
-                "Default": 52428800,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "commit_retries",
-                "Help": "Max number of times to try committing a multipart file.",
-                "Provider": "",
-                "Default": 100,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            }
-        ]
-    },
+    // {
+    //     "Name": "b2",
+    //     "Description": "Backblaze B2",
+    //     "Prefix": "b2",
+    //     "Options": [
+    //         {
+    //             "Name": "account",
+    //             "Help": "Account ID or Application Key ID",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": true,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "key",
+    //             "Help": "Application Key",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": true,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "endpoint",
+    //             "Help": "Endpoint for the service.\nLeave blank normally.",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "test_mode",
+    //             "Help": "A flag string for X-Bz-Test-Mode header for debugging.\n\nThis is for debugging purposes only. Setting it to one of the strings\nbelow will cause b2 to return specific errors:\n\n  * \"fail_some_uploads\"\n  * \"expire_some_account_authorization_tokens\"\n  * \"force_cap_exceeded\"\n\nThese will be set in the \"X-Bz-Test-Mode\" header which is documented\nin the [b2 integrations checklist](https://www.backblaze.com/b2/docs/integration_checklist.html).",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 2,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "versions",
+    //             "Help": "Include old versions in directory listings.\nNote that when using this no file write operations are permitted,\nso you can't upload files or delete them.",
+    //             "Provider": "",
+    //             "Default": false,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "hard_delete",
+    //             "Help": "Permanently delete files on remote removal, otherwise hide files.",
+    //             "Provider": "",
+    //             "Default": false,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "upload_cutoff",
+    //             "Help": "Cutoff for switching to chunked upload.\n\nFiles above this size will be uploaded in chunks of \"--b2-chunk-size\".\n\nThis value should be set no larger than 4.657GiB (== 5GB).",
+    //             "Provider": "",
+    //             "Default": 209715200,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "chunk_size",
+    //             "Help": "Upload chunk size. Must fit in memory.\n\nWhen uploading large files, chunk the file into this size.  Note that\nthese chunks are buffered in memory and there might a maximum of\n\"--transfers\" chunks in progress at once.  5,000,000 Bytes is the\nminimum size.",
+    //             "Provider": "",
+    //             "Default": 100663296,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "disable_checksum",
+    //             "Help": "Disable checksums for large (\u003e upload cutoff) files",
+    //             "Provider": "",
+    //             "Default": false,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         }
+    //     ]
+    // },
+    // {
+    //     "Name": "box",
+    //     "Description": "Box",
+    //     "Prefix": "box",
+    //     "Options": [
+    //         {
+    //             "Name": "client_id",
+    //             "Help": "Box App Client Id.\nLeave blank normally.",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "client_secret",
+    //             "Help": "Box App Client Secret\nLeave blank normally.",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "upload_cutoff",
+    //             "Help": "Cutoff for switching to multipart upload (\u003e= 50MB).",
+    //             "Provider": "",
+    //             "Default": 52428800,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "commit_retries",
+    //             "Help": "Max number of times to try committing a multipart file.",
+    //             "Provider": "",
+    //             "Default": 100,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         }
+    //     ]
+    // },
     {
         "Name": "crypt",
         "Description": "Encrypt/Decrypt a remote",
@@ -856,450 +856,450 @@ export const config = [
             }
         ]
     },
-    {
-        "Name": "drive",
-        "Description": "Google Drive",
-        "Prefix": "drive",
-        "Options": [
-            {
-                "Name": "client_id",
-                "Help": "Google Application Client Id\nLeave blank normally.",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "client_secret",
-                "Help": "Google Application Client Secret\nLeave blank normally.",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "scope",
-                "Help": "Scope that rclone should use when requesting access from drive.",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "Examples": [
-                    {
-                        "Value": "drive",
-                        "Help": "Full access all files, excluding Application Data Folder.",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "drive.readonly",
-                        "Help": "Read-only access to file metadata and file contents.",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "drive.file",
-                        "Help": "Access to files created by rclone only.\nThese are visible in the drive website.\nFile authorization is revoked when the user deauthorizes the app.",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "drive.appfolder",
-                        "Help": "Allows read and write access to the Application Data folder.\nThis is not visible in the drive website.",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "drive.metadata.readonly",
-                        "Help": "Allows read-only access to file metadata but\ndoes not allow any access to read or download file content.",
-                        "Provider": ""
-                    }
-                ],
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "root_folder_id",
-                "Help": "ID of the root folder\nLeave blank normally.\nFill in to access \"Computers\" folders. (see docs).",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "service_account_file",
-                "Help": "Service Account Credentials JSON file path \nLeave blank normally.\nNeeded only if you want use SA instead of interactive login.",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "service_account_credentials",
-                "Help": "Service Account Credentials JSON blob\nLeave blank normally.\nNeeded only if you want use SA instead of interactive login.",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 2,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "team_drive",
-                "Help": "ID of the Team Drive",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 2,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "auth_owner_only",
-                "Help": "Only consider files owned by the authenticated user.",
-                "Provider": "",
-                "Default": false,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "use_trash",
-                "Help": "Send files to the trash instead of deleting permanently.\nDefaults to true, namely sending files to the trash.\nUse `--drive-use-trash=false` to delete files permanently instead.",
-                "Provider": "",
-                "Default": true,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "skip_gdocs",
-                "Help": "Skip google documents in all listings.\nIf given, gdocs practically become invisible to rclone.",
-                "Provider": "",
-                "Default": false,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "shared_with_me",
-                "Help": "Only show files that are shared with me.\n\nInstructs rclone to operate on your \"Shared with me\" folder (where\nGoogle Drive lets you access the files and folders others have shared\nwith you).\n\nThis works both with the \"list\" (lsd, lsl, etc) and the \"copy\"\ncommands (copy, sync, etc), and with all other commands too.",
-                "Provider": "",
-                "Default": false,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "trashed_only",
-                "Help": "Only show files that are in the trash.\nThis will show trashed files in their original directory structure.",
-                "Provider": "",
-                "Default": false,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "formats",
-                "Help": "Deprecated: see export_formats",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 2,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "export_formats",
-                "Help": "Comma separated list of preferred formats for downloading Google docs.",
-                "Provider": "",
-                "Default": "docx,xlsx,pptx,svg",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "import_formats",
-                "Help": "Comma separated list of preferred formats for uploading Google docs.",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "allow_import_name_change",
-                "Help": "Allow the filetype to change when uploading Google docs (e.g. file.doc to file.docx). This will confuse sync and reupload every time.",
-                "Provider": "",
-                "Default": false,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "use_created_date",
-                "Help": "Use file created date instead of modified date.,\n\nUseful when downloading data and you want the creation date used in\nplace of the last modified date.\n\n**WARNING**: This flag may have some unexpected consequences.\n\nWhen uploading to your drive all files will be overwritten unless they\nhaven't been modified since their creation. And the inverse will occur\nwhile downloading.  This side effect can be avoided by using the\n\"--checksum\" flag.\n\nThis feature was implemented to retain photos capture date as recorded\nby google photos. You will first need to check the \"Create a Google\nPhotos folder\" option in your google drive settings. You can then copy\nor move the photos locally and use the date the image was taken\n(created) set as the modification date.",
-                "Provider": "",
-                "Default": false,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "list_chunk",
-                "Help": "Size of listing chunk 100-1000. 0 to disable.",
-                "Provider": "",
-                "Default": 1000,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "impersonate",
-                "Help": "Impersonate this user when using a service account.",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "alternate_export",
-                "Help": "Use alternate export URLs for google documents export.,\n\nIf this option is set this instructs rclone to use an alternate set of\nexport URLs for drive documents.  Users have reported that the\nofficial export URLs can't export large documents, whereas these\nunofficial ones can.\n\nSee rclone issue [#2243](https://github.com/ncw/rclone/issues/2243) for background,\n[this google drive issue](https://issuetracker.google.com/issues/36761333) and\n[this helpful post](https://www.labnol.org/internet/direct-links-for-google-drive/28356/).",
-                "Provider": "",
-                "Default": false,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "upload_cutoff",
-                "Help": "Cutoff for switching to chunked upload",
-                "Provider": "",
-                "Default": 8388608,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "chunk_size",
-                "Help": "Upload chunk size. Must a power of 2 \u003e= 256k.\n\nMaking this larger will improve performance, but note that each chunk\nis buffered in memory one per transfer.\n\nReducing this will reduce memory usage but decrease performance.",
-                "Provider": "",
-                "Default": 8388608,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "acknowledge_abuse",
-                "Help": "Set to allow files which return cannotDownloadAbusiveFile to be downloaded.\n\nIf downloading a file returns the error \"This file has been identified\nas malware or spam and cannot be downloaded\" with the error code\n\"cannotDownloadAbusiveFile\" then supply this flag to rclone to\nindicate you acknowledge the risks of downloading the file and rclone\nwill download it anyway.",
-                "Provider": "",
-                "Default": false,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "keep_revision_forever",
-                "Help": "Keep new head revision of each file forever.",
-                "Provider": "",
-                "Default": false,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "v2_download_min_size",
-                "Help": "If Object's are greater, use drive v2 API to download.",
-                "Provider": "",
-                "Default": -1,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "pacer_min_sleep",
-                "Help": "Minimum time to sleep between API calls.",
-                "Provider": "",
-                "Default": 100000000,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "pacer_burst",
-                "Help": "Number of API calls to allow without sleeping.",
-                "Provider": "",
-                "Default": 100,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            }
-        ]
-    },
-    {
-        "Name": "dropbox",
-        "Description": "Dropbox",
-        "Prefix": "dropbox",
-        "Options": [
-            {
-                "Name": "client_id",
-                "Help": "Dropbox App Client Id\nLeave blank normally.",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "client_secret",
-                "Help": "Dropbox App Client Secret\nLeave blank normally.",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "chunk_size",
-                "Help": "Upload chunk size. (\u003c 150M).\n\nAny files larger than this will be uploaded in chunks of this size.\n\nNote that chunks are buffered in memory (one at a time) so rclone can\ndeal with retries.  Setting this larger will increase the speed\nslightly (at most 10% for 128MB in tests) at the cost of using more\nmemory.  It can be set smaller if you are tight on memory.",
-                "Provider": "",
-                "Default": 50331648,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "impersonate",
-                "Help": "Impersonate this user when using a business account.",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            }
-        ]
-    },
+    // {
+    //     "Name": "drive",
+    //     "Description": "Google Drive",
+    //     "Prefix": "drive",
+    //     "Options": [
+    //         {
+    //             "Name": "client_id",
+    //             "Help": "Google Application Client Id\nLeave blank normally.",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "client_secret",
+    //             "Help": "Google Application Client Secret\nLeave blank normally.",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "scope",
+    //             "Help": "Scope that rclone should use when requesting access from drive.",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "Examples": [
+    //                 {
+    //                     "Value": "drive",
+    //                     "Help": "Full access all files, excluding Application Data Folder.",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "drive.readonly",
+    //                     "Help": "Read-only access to file metadata and file contents.",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "drive.file",
+    //                     "Help": "Access to files created by rclone only.\nThese are visible in the drive website.\nFile authorization is revoked when the user deauthorizes the app.",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "drive.appfolder",
+    //                     "Help": "Allows read and write access to the Application Data folder.\nThis is not visible in the drive website.",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "drive.metadata.readonly",
+    //                     "Help": "Allows read-only access to file metadata but\ndoes not allow any access to read or download file content.",
+    //                     "Provider": ""
+    //                 }
+    //             ],
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "root_folder_id",
+    //             "Help": "ID of the root folder\nLeave blank normally.\nFill in to access \"Computers\" folders. (see docs).",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "service_account_file",
+    //             "Help": "Service Account Credentials JSON file path \nLeave blank normally.\nNeeded only if you want use SA instead of interactive login.",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "service_account_credentials",
+    //             "Help": "Service Account Credentials JSON blob\nLeave blank normally.\nNeeded only if you want use SA instead of interactive login.",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 2,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "team_drive",
+    //             "Help": "ID of the Team Drive",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 2,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "auth_owner_only",
+    //             "Help": "Only consider files owned by the authenticated user.",
+    //             "Provider": "",
+    //             "Default": false,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "use_trash",
+    //             "Help": "Send files to the trash instead of deleting permanently.\nDefaults to true, namely sending files to the trash.\nUse `--drive-use-trash=false` to delete files permanently instead.",
+    //             "Provider": "",
+    //             "Default": true,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "skip_gdocs",
+    //             "Help": "Skip google documents in all listings.\nIf given, gdocs practically become invisible to rclone.",
+    //             "Provider": "",
+    //             "Default": false,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "shared_with_me",
+    //             "Help": "Only show files that are shared with me.\n\nInstructs rclone to operate on your \"Shared with me\" folder (where\nGoogle Drive lets you access the files and folders others have shared\nwith you).\n\nThis works both with the \"list\" (lsd, lsl, etc) and the \"copy\"\ncommands (copy, sync, etc), and with all other commands too.",
+    //             "Provider": "",
+    //             "Default": false,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "trashed_only",
+    //             "Help": "Only show files that are in the trash.\nThis will show trashed files in their original directory structure.",
+    //             "Provider": "",
+    //             "Default": false,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "formats",
+    //             "Help": "Deprecated: see export_formats",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 2,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "export_formats",
+    //             "Help": "Comma separated list of preferred formats for downloading Google docs.",
+    //             "Provider": "",
+    //             "Default": "docx,xlsx,pptx,svg",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "import_formats",
+    //             "Help": "Comma separated list of preferred formats for uploading Google docs.",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "allow_import_name_change",
+    //             "Help": "Allow the filetype to change when uploading Google docs (e.g. file.doc to file.docx). This will confuse sync and reupload every time.",
+    //             "Provider": "",
+    //             "Default": false,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "use_created_date",
+    //             "Help": "Use file created date instead of modified date.,\n\nUseful when downloading data and you want the creation date used in\nplace of the last modified date.\n\n**WARNING**: This flag may have some unexpected consequences.\n\nWhen uploading to your drive all files will be overwritten unless they\nhaven't been modified since their creation. And the inverse will occur\nwhile downloading.  This side effect can be avoided by using the\n\"--checksum\" flag.\n\nThis feature was implemented to retain photos capture date as recorded\nby google photos. You will first need to check the \"Create a Google\nPhotos folder\" option in your google drive settings. You can then copy\nor move the photos locally and use the date the image was taken\n(created) set as the modification date.",
+    //             "Provider": "",
+    //             "Default": false,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "list_chunk",
+    //             "Help": "Size of listing chunk 100-1000. 0 to disable.",
+    //             "Provider": "",
+    //             "Default": 1000,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "impersonate",
+    //             "Help": "Impersonate this user when using a service account.",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "alternate_export",
+    //             "Help": "Use alternate export URLs for google documents export.,\n\nIf this option is set this instructs rclone to use an alternate set of\nexport URLs for drive documents.  Users have reported that the\nofficial export URLs can't export large documents, whereas these\nunofficial ones can.\n\nSee rclone issue [#2243](https://github.com/ncw/rclone/issues/2243) for background,\n[this google drive issue](https://issuetracker.google.com/issues/36761333) and\n[this helpful post](https://www.labnol.org/internet/direct-links-for-google-drive/28356/).",
+    //             "Provider": "",
+    //             "Default": false,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "upload_cutoff",
+    //             "Help": "Cutoff for switching to chunked upload",
+    //             "Provider": "",
+    //             "Default": 8388608,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "chunk_size",
+    //             "Help": "Upload chunk size. Must a power of 2 \u003e= 256k.\n\nMaking this larger will improve performance, but note that each chunk\nis buffered in memory one per transfer.\n\nReducing this will reduce memory usage but decrease performance.",
+    //             "Provider": "",
+    //             "Default": 8388608,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "acknowledge_abuse",
+    //             "Help": "Set to allow files which return cannotDownloadAbusiveFile to be downloaded.\n\nIf downloading a file returns the error \"This file has been identified\nas malware or spam and cannot be downloaded\" with the error code\n\"cannotDownloadAbusiveFile\" then supply this flag to rclone to\nindicate you acknowledge the risks of downloading the file and rclone\nwill download it anyway.",
+    //             "Provider": "",
+    //             "Default": false,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "keep_revision_forever",
+    //             "Help": "Keep new head revision of each file forever.",
+    //             "Provider": "",
+    //             "Default": false,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "v2_download_min_size",
+    //             "Help": "If Object's are greater, use drive v2 API to download.",
+    //             "Provider": "",
+    //             "Default": -1,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "pacer_min_sleep",
+    //             "Help": "Minimum time to sleep between API calls.",
+    //             "Provider": "",
+    //             "Default": 100000000,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "pacer_burst",
+    //             "Help": "Number of API calls to allow without sleeping.",
+    //             "Provider": "",
+    //             "Default": 100,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         }
+    //     ]
+    // },
+    // {
+    //     "Name": "dropbox",
+    //     "Description": "Dropbox",
+    //     "Prefix": "dropbox",
+    //     "Options": [
+    //         {
+    //             "Name": "client_id",
+    //             "Help": "Dropbox App Client Id\nLeave blank normally.",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "client_secret",
+    //             "Help": "Dropbox App Client Secret\nLeave blank normally.",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "chunk_size",
+    //             "Help": "Upload chunk size. (\u003c 150M).\n\nAny files larger than this will be uploaded in chunks of this size.\n\nNote that chunks are buffered in memory (one at a time) so rclone can\ndeal with retries.  Setting this larger will increase the speed\nslightly (at most 10% for 128MB in tests) at the cost of using more\nmemory.  It can be set smaller if you are tight on memory.",
+    //             "Provider": "",
+    //             "Default": 50331648,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "impersonate",
+    //             "Help": "Impersonate this user when using a business account.",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         }
+    //     ]
+    // },
     {
         "Name": "ftp",
         "Description": "FTP Connection",
@@ -1366,323 +1366,323 @@ export const config = [
             }
         ]
     },
-    {
-        "Name": "google cloud storage",
-        "Description": "Google Cloud Storage (this is not Google Drive)",
-        "Prefix": "gcs",
-        "Options": [
-            {
-                "Name": "client_id",
-                "Help": "Google Application Client Id\nLeave blank normally.",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "client_secret",
-                "Help": "Google Application Client Secret\nLeave blank normally.",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "project_number",
-                "Help": "Project number.\nOptional - needed only for list/create/delete buckets - see your developer console.",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "service_account_file",
-                "Help": "Service Account Credentials JSON file path\nLeave blank normally.\nNeeded only if you want use SA instead of interactive login.",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "service_account_credentials",
-                "Help": "Service Account Credentials JSON blob\nLeave blank normally.\nNeeded only if you want use SA instead of interactive login.",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 3,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "object_acl",
-                "Help": "Access Control List for new objects.",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "Examples": [
-                    {
-                        "Value": "authenticatedRead",
-                        "Help": "Object owner gets OWNER access, and all Authenticated Users get READER access.",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "bucketOwnerFullControl",
-                        "Help": "Object owner gets OWNER access, and project team owners get OWNER access.",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "bucketOwnerRead",
-                        "Help": "Object owner gets OWNER access, and project team owners get READER access.",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "private",
-                        "Help": "Object owner gets OWNER access [default if left blank].",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "projectPrivate",
-                        "Help": "Object owner gets OWNER access, and project team members get access according to their roles.",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "publicRead",
-                        "Help": "Object owner gets OWNER access, and all Users get READER access.",
-                        "Provider": ""
-                    }
-                ],
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "bucket_acl",
-                "Help": "Access Control List for new buckets.",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "Examples": [
-                    {
-                        "Value": "authenticatedRead",
-                        "Help": "Project team owners get OWNER access, and all Authenticated Users get READER access.",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "private",
-                        "Help": "Project team owners get OWNER access [default if left blank].",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "projectPrivate",
-                        "Help": "Project team members get access according to their roles.",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "publicRead",
-                        "Help": "Project team owners get OWNER access, and all Users get READER access.",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "publicReadWrite",
-                        "Help": "Project team owners get OWNER access, and all Users get WRITER access.",
-                        "Provider": ""
-                    }
-                ],
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "location",
-                "Help": "Location for the newly created buckets.",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "Examples": [
-                    {
-                        "Value": "",
-                        "Help": "Empty for default location (US).",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "asia",
-                        "Help": "Multi-regional location for Asia.",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "eu",
-                        "Help": "Multi-regional location for Europe.",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "us",
-                        "Help": "Multi-regional location for United States.",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "asia-east1",
-                        "Help": "Taiwan.",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "asia-east2",
-                        "Help": "Hong Kong.",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "asia-northeast1",
-                        "Help": "Tokyo.",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "asia-south1",
-                        "Help": "Mumbai.",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "asia-southeast1",
-                        "Help": "Singapore.",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "australia-southeast1",
-                        "Help": "Sydney.",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "europe-north1",
-                        "Help": "Finland.",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "europe-west1",
-                        "Help": "Belgium.",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "europe-west2",
-                        "Help": "London.",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "europe-west3",
-                        "Help": "Frankfurt.",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "europe-west4",
-                        "Help": "Netherlands.",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "us-central1",
-                        "Help": "Iowa.",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "us-east1",
-                        "Help": "South Carolina.",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "us-east4",
-                        "Help": "Northern Virginia.",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "us-west1",
-                        "Help": "Oregon.",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "us-west2",
-                        "Help": "California.",
-                        "Provider": ""
-                    }
-                ],
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "storage_class",
-                "Help": "The storage class to use when storing objects in Google Cloud Storage.",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "Examples": [
-                    {
-                        "Value": "",
-                        "Help": "Default",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "MULTI_REGIONAL",
-                        "Help": "Multi-regional storage class",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "REGIONAL",
-                        "Help": "Regional storage class",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "NEARLINE",
-                        "Help": "Nearline storage class",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "COLDLINE",
-                        "Help": "Coldline storage class",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "DURABLE_REDUCED_AVAILABILITY",
-                        "Help": "Durable reduced availability storage class",
-                        "Provider": ""
-                    }
-                ],
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            }
-        ]
-    },
+    // {
+    //     "Name": "google cloud storage",
+    //     "Description": "Google Cloud Storage (this is not Google Drive)",
+    //     "Prefix": "gcs",
+    //     "Options": [
+    //         {
+    //             "Name": "client_id",
+    //             "Help": "Google Application Client Id\nLeave blank normally.",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "client_secret",
+    //             "Help": "Google Application Client Secret\nLeave blank normally.",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "project_number",
+    //             "Help": "Project number.\nOptional - needed only for list/create/delete buckets - see your developer console.",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "service_account_file",
+    //             "Help": "Service Account Credentials JSON file path\nLeave blank normally.\nNeeded only if you want use SA instead of interactive login.",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "service_account_credentials",
+    //             "Help": "Service Account Credentials JSON blob\nLeave blank normally.\nNeeded only if you want use SA instead of interactive login.",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 3,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "object_acl",
+    //             "Help": "Access Control List for new objects.",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "Examples": [
+    //                 {
+    //                     "Value": "authenticatedRead",
+    //                     "Help": "Object owner gets OWNER access, and all Authenticated Users get READER access.",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "bucketOwnerFullControl",
+    //                     "Help": "Object owner gets OWNER access, and project team owners get OWNER access.",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "bucketOwnerRead",
+    //                     "Help": "Object owner gets OWNER access, and project team owners get READER access.",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "private",
+    //                     "Help": "Object owner gets OWNER access [default if left blank].",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "projectPrivate",
+    //                     "Help": "Object owner gets OWNER access, and project team members get access according to their roles.",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "publicRead",
+    //                     "Help": "Object owner gets OWNER access, and all Users get READER access.",
+    //                     "Provider": ""
+    //                 }
+    //             ],
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "bucket_acl",
+    //             "Help": "Access Control List for new buckets.",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "Examples": [
+    //                 {
+    //                     "Value": "authenticatedRead",
+    //                     "Help": "Project team owners get OWNER access, and all Authenticated Users get READER access.",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "private",
+    //                     "Help": "Project team owners get OWNER access [default if left blank].",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "projectPrivate",
+    //                     "Help": "Project team members get access according to their roles.",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "publicRead",
+    //                     "Help": "Project team owners get OWNER access, and all Users get READER access.",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "publicReadWrite",
+    //                     "Help": "Project team owners get OWNER access, and all Users get WRITER access.",
+    //                     "Provider": ""
+    //                 }
+    //             ],
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "location",
+    //             "Help": "Location for the newly created buckets.",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "Examples": [
+    //                 {
+    //                     "Value": "",
+    //                     "Help": "Empty for default location (US).",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "asia",
+    //                     "Help": "Multi-regional location for Asia.",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "eu",
+    //                     "Help": "Multi-regional location for Europe.",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "us",
+    //                     "Help": "Multi-regional location for United States.",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "asia-east1",
+    //                     "Help": "Taiwan.",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "asia-east2",
+    //                     "Help": "Hong Kong.",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "asia-northeast1",
+    //                     "Help": "Tokyo.",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "asia-south1",
+    //                     "Help": "Mumbai.",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "asia-southeast1",
+    //                     "Help": "Singapore.",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "australia-southeast1",
+    //                     "Help": "Sydney.",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "europe-north1",
+    //                     "Help": "Finland.",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "europe-west1",
+    //                     "Help": "Belgium.",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "europe-west2",
+    //                     "Help": "London.",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "europe-west3",
+    //                     "Help": "Frankfurt.",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "europe-west4",
+    //                     "Help": "Netherlands.",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "us-central1",
+    //                     "Help": "Iowa.",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "us-east1",
+    //                     "Help": "South Carolina.",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "us-east4",
+    //                     "Help": "Northern Virginia.",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "us-west1",
+    //                     "Help": "Oregon.",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "us-west2",
+    //                     "Help": "California.",
+    //                     "Provider": ""
+    //                 }
+    //             ],
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "storage_class",
+    //             "Help": "The storage class to use when storing objects in Google Cloud Storage.",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "Examples": [
+    //                 {
+    //                     "Value": "",
+    //                     "Help": "Default",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "MULTI_REGIONAL",
+    //                     "Help": "Multi-regional storage class",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "REGIONAL",
+    //                     "Help": "Regional storage class",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "NEARLINE",
+    //                     "Help": "Nearline storage class",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "COLDLINE",
+    //                     "Help": "Coldline storage class",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "DURABLE_REDUCED_AVAILABILITY",
+    //                     "Help": "Durable reduced availability storage class",
+    //                     "Provider": ""
+    //                 }
+    //             ],
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         }
+    //     ]
+    // },
     {
         "Name": "http",
         "Description": "http Connection",
@@ -1715,507 +1715,507 @@ export const config = [
             }
         ]
     },
-    {
-        "Name": "swift",
-        "Description": "Openstack Swift (Rackspace Cloud Files, Memset Memstore, OVH)",
-        "Prefix": "swift",
-        "Options": [
-            {
-                "Name": "env_auth",
-                "Help": "Get swift credentials from environment variables in standard OpenStack form.",
-                "Provider": "",
-                "Default": false,
-                "Value": null,
-                "Examples": [
-                    {
-                        "Value": "false",
-                        "Help": "Enter swift credentials in the next step",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "true",
-                        "Help": "Get swift credentials from environment vars. Leave other fields blank if using this.",
-                        "Provider": ""
-                    }
-                ],
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "user",
-                "Help": "User name to log in (OS_USERNAME).",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "key",
-                "Help": "API key or password (OS_PASSWORD).",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "auth",
-                "Help": "Authentication URL for server (OS_AUTH_URL).",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "Examples": [
-                    {
-                        "Value": "https://auth.api.rackspacecloud.com/v1.0",
-                        "Help": "Rackspace US",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "https://lon.auth.api.rackspacecloud.com/v1.0",
-                        "Help": "Rackspace UK",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "https://identity.api.rackspacecloud.com/v2.0",
-                        "Help": "Rackspace v2",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "https://auth.storage.memset.com/v1.0",
-                        "Help": "Memset Memstore UK",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "https://auth.storage.memset.com/v2.0",
-                        "Help": "Memset Memstore UK v2",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "https://auth.cloud.ovh.net/v2.0",
-                        "Help": "OVH",
-                        "Provider": ""
-                    }
-                ],
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "user_id",
-                "Help": "User ID to log in - optional - most swift systems use user and leave this blank (v3 auth) (OS_USER_ID).",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "domain",
-                "Help": "User domain - optional (v3 auth) (OS_USER_DOMAIN_NAME)",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "tenant",
-                "Help": "Tenant name - optional for v1 auth, this or tenant_id required otherwise (OS_TENANT_NAME or OS_PROJECT_NAME)",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "tenant_id",
-                "Help": "Tenant ID - optional for v1 auth, this or tenant required otherwise (OS_TENANT_ID)",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "tenant_domain",
-                "Help": "Tenant domain - optional (v3 auth) (OS_PROJECT_DOMAIN_NAME)",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "region",
-                "Help": "Region name - optional (OS_REGION_NAME)",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "storage_url",
-                "Help": "Storage URL - optional (OS_STORAGE_URL)",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "auth_token",
-                "Help": "Auth Token from alternate authentication - optional (OS_AUTH_TOKEN)",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "application_credential_id",
-                "Help": "Application Credential ID (OS_APPLICATION_CREDENTIAL_ID)",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "application_credential_name",
-                "Help": "Application Credential Name (OS_APPLICATION_CREDENTIAL_NAME)",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "application_credential_secret",
-                "Help": "Application Credential Secret (OS_APPLICATION_CREDENTIAL_SECRET)",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "auth_version",
-                "Help": "AuthVersion - optional - set to (1,2,3) if your auth URL has no version (ST_AUTH_VERSION)",
-                "Provider": "",
-                "Default": 0,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "endpoint_type",
-                "Help": "Endpoint type to choose from the service catalogue (OS_ENDPOINT_TYPE)",
-                "Provider": "",
-                "Default": "public",
-                "Value": null,
-                "Examples": [
-                    {
-                        "Value": "public",
-                        "Help": "Public (default, choose this if not sure)",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "internal",
-                        "Help": "Internal (use internal service net)",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "admin",
-                        "Help": "Admin",
-                        "Provider": ""
-                    }
-                ],
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "storage_policy",
-                "Help": "The storage policy to use when creating a new container\n\nThis applies the specified storage policy when creating a new\ncontainer. The policy cannot be changed afterwards. The allowed\nconfiguration values and their meaning depend on your Swift storage\nprovider.",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "Examples": [
-                    {
-                        "Value": "",
-                        "Help": "Default",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "pcs",
-                        "Help": "OVH Public Cloud Storage",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "pca",
-                        "Help": "OVH Public Cloud Archive",
-                        "Provider": ""
-                    }
-                ],
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "chunk_size",
-                "Help": "Above this size files will be chunked into a _segments container.\n\nAbove this size files will be chunked into a _segments container.  The\ndefault for this is 5GB which is its maximum value.",
-                "Provider": "",
-                "Default": 5368709120,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "no_chunk",
-                "Help": "Don't chunk files during streaming upload.\n\nWhen doing streaming uploads (eg using rcat or mount) setting this\nflag will cause the swift backend to not upload chunked files.\n\nThis will limit the maximum upload size to 5GB. However non chunked\nfiles are easier to deal with and have an MD5SUM.\n\nRclone will still chunk files bigger than chunk_size when doing normal\ncopy operations.",
-                "Provider": "",
-                "Default": false,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            }
-        ]
-    },
-    {
-        "Name": "hubic",
-        "Description": "Hubic",
-        "Prefix": "hubic",
-        "Options": [
-            {
-                "Name": "client_id",
-                "Help": "Hubic Client Id\nLeave blank normally.",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "client_secret",
-                "Help": "Hubic Client Secret\nLeave blank normally.",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "chunk_size",
-                "Help": "Above this size files will be chunked into a _segments container.\n\nAbove this size files will be chunked into a _segments container.  The\ndefault for this is 5GB which is its maximum value.",
-                "Provider": "",
-                "Default": 5368709120,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "no_chunk",
-                "Help": "Don't chunk files during streaming upload.\n\nWhen doing streaming uploads (eg using rcat or mount) setting this\nflag will cause the swift backend to not upload chunked files.\n\nThis will limit the maximum upload size to 5GB. However non chunked\nfiles are easier to deal with and have an MD5SUM.\n\nRclone will still chunk files bigger than chunk_size when doing normal\ncopy operations.",
-                "Provider": "",
-                "Default": false,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            }
-        ]
-    },
-    {
-        "Name": "jottacloud",
-        "Description": "JottaCloud",
-        "Prefix": "jottacloud",
-        "Options": [
-            {
-                "Name": "user",
-                "Help": "User Name:",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "mountpoint",
-                "Help": "The mountpoint to use.",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "Examples": [
-                    {
-                        "Value": "Sync",
-                        "Help": "Will be synced by the official client.",
-                        "Provider": ""
-                    },
-                    {
-                        "Value": "Archive",
-                        "Help": "Archive",
-                        "Provider": ""
-                    }
-                ],
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": true,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "md5_memory_limit",
-                "Help": "Files bigger than this will be cached on disk to calculate the MD5 if required.",
-                "Provider": "",
-                "Default": 10485760,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "hard_delete",
-                "Help": "Delete files permanently rather than putting them into the trash.",
-                "Provider": "",
-                "Default": false,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "unlink",
-                "Help": "Remove existing public link to file/folder with link command rather than creating.\nDefault is false, meaning link command will create or retrieve public link.",
-                "Provider": "",
-                "Default": false,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "upload_resume_limit",
-                "Help": "Files bigger than this can be resumed if the upload fail's.",
-                "Provider": "",
-                "Default": 10485760,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            }
-        ]
-    },
+    // {
+    //     "Name": "swift",
+    //     "Description": "Openstack Swift (Rackspace Cloud Files, Memset Memstore, OVH)",
+    //     "Prefix": "swift",
+    //     "Options": [
+    //         {
+    //             "Name": "env_auth",
+    //             "Help": "Get swift credentials from environment variables in standard OpenStack form.",
+    //             "Provider": "",
+    //             "Default": false,
+    //             "Value": null,
+    //             "Examples": [
+    //                 {
+    //                     "Value": "false",
+    //                     "Help": "Enter swift credentials in the next step",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "true",
+    //                     "Help": "Get swift credentials from environment vars. Leave other fields blank if using this.",
+    //                     "Provider": ""
+    //                 }
+    //             ],
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "user",
+    //             "Help": "User name to log in (OS_USERNAME).",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "key",
+    //             "Help": "API key or password (OS_PASSWORD).",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "auth",
+    //             "Help": "Authentication URL for server (OS_AUTH_URL).",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "Examples": [
+    //                 {
+    //                     "Value": "https://auth.api.rackspacecloud.com/v1.0",
+    //                     "Help": "Rackspace US",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "https://lon.auth.api.rackspacecloud.com/v1.0",
+    //                     "Help": "Rackspace UK",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "https://identity.api.rackspacecloud.com/v2.0",
+    //                     "Help": "Rackspace v2",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "https://auth.storage.memset.com/v1.0",
+    //                     "Help": "Memset Memstore UK",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "https://auth.storage.memset.com/v2.0",
+    //                     "Help": "Memset Memstore UK v2",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "https://auth.cloud.ovh.net/v2.0",
+    //                     "Help": "OVH",
+    //                     "Provider": ""
+    //                 }
+    //             ],
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "user_id",
+    //             "Help": "User ID to log in - optional - most swift systems use user and leave this blank (v3 auth) (OS_USER_ID).",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "domain",
+    //             "Help": "User domain - optional (v3 auth) (OS_USER_DOMAIN_NAME)",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "tenant",
+    //             "Help": "Tenant name - optional for v1 auth, this or tenant_id required otherwise (OS_TENANT_NAME or OS_PROJECT_NAME)",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "tenant_id",
+    //             "Help": "Tenant ID - optional for v1 auth, this or tenant required otherwise (OS_TENANT_ID)",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "tenant_domain",
+    //             "Help": "Tenant domain - optional (v3 auth) (OS_PROJECT_DOMAIN_NAME)",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "region",
+    //             "Help": "Region name - optional (OS_REGION_NAME)",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "storage_url",
+    //             "Help": "Storage URL - optional (OS_STORAGE_URL)",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "auth_token",
+    //             "Help": "Auth Token from alternate authentication - optional (OS_AUTH_TOKEN)",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "application_credential_id",
+    //             "Help": "Application Credential ID (OS_APPLICATION_CREDENTIAL_ID)",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "application_credential_name",
+    //             "Help": "Application Credential Name (OS_APPLICATION_CREDENTIAL_NAME)",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "application_credential_secret",
+    //             "Help": "Application Credential Secret (OS_APPLICATION_CREDENTIAL_SECRET)",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "auth_version",
+    //             "Help": "AuthVersion - optional - set to (1,2,3) if your auth URL has no version (ST_AUTH_VERSION)",
+    //             "Provider": "",
+    //             "Default": 0,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "endpoint_type",
+    //             "Help": "Endpoint type to choose from the service catalogue (OS_ENDPOINT_TYPE)",
+    //             "Provider": "",
+    //             "Default": "public",
+    //             "Value": null,
+    //             "Examples": [
+    //                 {
+    //                     "Value": "public",
+    //                     "Help": "Public (default, choose this if not sure)",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "internal",
+    //                     "Help": "Internal (use internal service net)",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "admin",
+    //                     "Help": "Admin",
+    //                     "Provider": ""
+    //                 }
+    //             ],
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "storage_policy",
+    //             "Help": "The storage policy to use when creating a new container\n\nThis applies the specified storage policy when creating a new\ncontainer. The policy cannot be changed afterwards. The allowed\nconfiguration values and their meaning depend on your Swift storage\nprovider.",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "Examples": [
+    //                 {
+    //                     "Value": "",
+    //                     "Help": "Default",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "pcs",
+    //                     "Help": "OVH Public Cloud Storage",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "pca",
+    //                     "Help": "OVH Public Cloud Archive",
+    //                     "Provider": ""
+    //                 }
+    //             ],
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "chunk_size",
+    //             "Help": "Above this size files will be chunked into a _segments container.\n\nAbove this size files will be chunked into a _segments container.  The\ndefault for this is 5GB which is its maximum value.",
+    //             "Provider": "",
+    //             "Default": 5368709120,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "no_chunk",
+    //             "Help": "Don't chunk files during streaming upload.\n\nWhen doing streaming uploads (eg using rcat or mount) setting this\nflag will cause the swift backend to not upload chunked files.\n\nThis will limit the maximum upload size to 5GB. However non chunked\nfiles are easier to deal with and have an MD5SUM.\n\nRclone will still chunk files bigger than chunk_size when doing normal\ncopy operations.",
+    //             "Provider": "",
+    //             "Default": false,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         }
+    //     ]
+    // },
+    // {
+    //     "Name": "hubic",
+    //     "Description": "Hubic",
+    //     "Prefix": "hubic",
+    //     "Options": [
+    //         {
+    //             "Name": "client_id",
+    //             "Help": "Hubic Client Id\nLeave blank normally.",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "client_secret",
+    //             "Help": "Hubic Client Secret\nLeave blank normally.",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "chunk_size",
+    //             "Help": "Above this size files will be chunked into a _segments container.\n\nAbove this size files will be chunked into a _segments container.  The\ndefault for this is 5GB which is its maximum value.",
+    //             "Provider": "",
+    //             "Default": 5368709120,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "no_chunk",
+    //             "Help": "Don't chunk files during streaming upload.\n\nWhen doing streaming uploads (eg using rcat or mount) setting this\nflag will cause the swift backend to not upload chunked files.\n\nThis will limit the maximum upload size to 5GB. However non chunked\nfiles are easier to deal with and have an MD5SUM.\n\nRclone will still chunk files bigger than chunk_size when doing normal\ncopy operations.",
+    //             "Provider": "",
+    //             "Default": false,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         }
+    //     ]
+    // },
+    // {
+    //     "Name": "jottacloud",
+    //     "Description": "JottaCloud",
+    //     "Prefix": "jottacloud",
+    //     "Options": [
+    //         {
+    //             "Name": "user",
+    //             "Help": "User Name:",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "mountpoint",
+    //             "Help": "The mountpoint to use.",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "Examples": [
+    //                 {
+    //                     "Value": "Sync",
+    //                     "Help": "Will be synced by the official client.",
+    //                     "Provider": ""
+    //                 },
+    //                 {
+    //                     "Value": "Archive",
+    //                     "Help": "Archive",
+    //                     "Provider": ""
+    //                 }
+    //             ],
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": true,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "md5_memory_limit",
+    //             "Help": "Files bigger than this will be cached on disk to calculate the MD5 if required.",
+    //             "Provider": "",
+    //             "Default": 10485760,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "hard_delete",
+    //             "Help": "Delete files permanently rather than putting them into the trash.",
+    //             "Provider": "",
+    //             "Default": false,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "unlink",
+    //             "Help": "Remove existing public link to file/folder with link command rather than creating.\nDefault is false, meaning link command will create or retrieve public link.",
+    //             "Provider": "",
+    //             "Default": false,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "upload_resume_limit",
+    //             "Help": "Files bigger than this can be resumed if the upload fail's.",
+    //             "Provider": "",
+    //             "Default": 10485760,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         }
+    //     ]
+    // },
     {
         "Name": "local",
         "Description": "Local Disk",
@@ -2321,216 +2321,216 @@ export const config = [
             }
         ]
     },
-    {
-        "Name": "mega",
-        "Description": "Mega",
-        "Prefix": "mega",
-        "Options": [
-            {
-                "Name": "user",
-                "Help": "User name",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": true,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "pass",
-                "Help": "Password.",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": true,
-                "IsPassword": true,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "debug",
-                "Help": "Output more debug from Mega.\n\nIf this flag is set (along with -vv) it will print further debugging\ninformation from the mega backend.",
-                "Provider": "",
-                "Default": false,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "hard_delete",
-                "Help": "Delete files permanently rather than putting them into the trash.\n\nNormally the mega backend will put all deletions into the trash rather\nthan permanently deleting them.  If you specify this then rclone will\npermanently delete objects instead.",
-                "Provider": "",
-                "Default": false,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            }
-        ]
-    },
-    {
-        "Name": "onedrive",
-        "Description": "Microsoft OneDrive",
-        "Prefix": "onedrive",
-        "Options": [
-            {
-                "Name": "client_id",
-                "Help": "Microsoft App Client Id\nLeave blank normally.",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "client_secret",
-                "Help": "Microsoft App Client Secret\nLeave blank normally.",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "chunk_size",
-                "Help": "Chunk size to upload files with - must be multiple of 320k.\n\nAbove this size files will be chunked - must be multiple of 320k. Note\nthat the chunks will be buffered into memory.",
-                "Provider": "",
-                "Default": 10485760,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "drive_id",
-                "Help": "The ID of the drive to use",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "drive_type",
-                "Help": "The type of the drive ( personal | business | documentLibrary )",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            },
-            {
-                "Name": "expose_onenote_files",
-                "Help": "Set to make OneNote files show up in directory listings.\n\nBy default rclone will hide OneNote files in directory listings because\noperations like \"Open\" and \"Update\" won't work on them.  But this\nbehaviour may also prevent you from deleting them.  If you want to\ndelete OneNote files or otherwise want them to show up in directory\nlisting, set this option.",
-                "Provider": "",
-                "Default": false,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            }
-        ]
-    },
-    {
-        "Name": "opendrive",
-        "Description": "OpenDrive",
-        "Prefix": "opendrive",
-        "Options": [
-            {
-                "Name": "username",
-                "Help": "Username",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": true,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "password",
-                "Help": "Password.",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": true,
-                "IsPassword": true,
-                "NoPrefix": false,
-                "Advanced": false
-            }
-        ]
-    },
-    {
-        "Name": "pcloud",
-        "Description": "Pcloud",
-        "Prefix": "pcloud",
-        "Options": [
-            {
-                "Name": "client_id",
-                "Help": "Pcloud App Client Id\nLeave blank normally.",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "client_secret",
-                "Help": "Pcloud App Client Secret\nLeave blank normally.",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            }
-        ]
-    },
+    // {
+    //     "Name": "mega",
+    //     "Description": "Mega",
+    //     "Prefix": "mega",
+    //     "Options": [
+    //         {
+    //             "Name": "user",
+    //             "Help": "User name",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": true,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "pass",
+    //             "Help": "Password.",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": true,
+    //             "IsPassword": true,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "debug",
+    //             "Help": "Output more debug from Mega.\n\nIf this flag is set (along with -vv) it will print further debugging\ninformation from the mega backend.",
+    //             "Provider": "",
+    //             "Default": false,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "hard_delete",
+    //             "Help": "Delete files permanently rather than putting them into the trash.\n\nNormally the mega backend will put all deletions into the trash rather\nthan permanently deleting them.  If you specify this then rclone will\npermanently delete objects instead.",
+    //             "Provider": "",
+    //             "Default": false,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         }
+    //     ]
+    // },
+    // {
+    //     "Name": "onedrive",
+    //     "Description": "Microsoft OneDrive",
+    //     "Prefix": "onedrive",
+    //     "Options": [
+    //         {
+    //             "Name": "client_id",
+    //             "Help": "Microsoft App Client Id\nLeave blank normally.",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "client_secret",
+    //             "Help": "Microsoft App Client Secret\nLeave blank normally.",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "chunk_size",
+    //             "Help": "Chunk size to upload files with - must be multiple of 320k.\n\nAbove this size files will be chunked - must be multiple of 320k. Note\nthat the chunks will be buffered into memory.",
+    //             "Provider": "",
+    //             "Default": 10485760,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "drive_id",
+    //             "Help": "The ID of the drive to use",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "drive_type",
+    //             "Help": "The type of the drive ( personal | business | documentLibrary )",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         },
+    //         {
+    //             "Name": "expose_onenote_files",
+    //             "Help": "Set to make OneNote files show up in directory listings.\n\nBy default rclone will hide OneNote files in directory listings because\noperations like \"Open\" and \"Update\" won't work on them.  But this\nbehaviour may also prevent you from deleting them.  If you want to\ndelete OneNote files or otherwise want them to show up in directory\nlisting, set this option.",
+    //             "Provider": "",
+    //             "Default": false,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         }
+    //     ]
+    // },
+    // {
+    //     "Name": "opendrive",
+    //     "Description": "OpenDrive",
+    //     "Prefix": "opendrive",
+    //     "Options": [
+    //         {
+    //             "Name": "username",
+    //             "Help": "Username",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": true,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "password",
+    //             "Help": "Password.",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": true,
+    //             "IsPassword": true,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         }
+    //     ]
+    // },
+    // {
+    //     "Name": "pcloud",
+    //     "Description": "Pcloud",
+    //     "Prefix": "pcloud",
+    //     "Options": [
+    //         {
+    //             "Name": "client_id",
+    //             "Help": "Pcloud App Client Id\nLeave blank normally.",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "client_secret",
+    //             "Help": "Pcloud App Client Secret\nLeave blank normally.",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         }
+    //     ]
+    // },
     {
         "Name": "qingstor",
         "Description": "QingCloud Object Storage",
@@ -4182,50 +4182,50 @@ export const config = [
             }
         ]
     },
-    {
-        "Name": "yandex",
-        "Description": "Yandex Disk",
-        "Prefix": "yandex",
-        "Options": [
-            {
-                "Name": "client_id",
-                "Help": "Yandex Client Id\nLeave blank normally.",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "client_secret",
-                "Help": "Yandex Client Secret\nLeave blank normally.",
-                "Provider": "",
-                "Default": "",
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": false
-            },
-            {
-                "Name": "unlink",
-                "Help": "Remove existing public link to file/folder with link command rather than creating.\nDefault is false, meaning link command will create or retrieve public link.",
-                "Provider": "",
-                "Default": false,
-                "Value": null,
-                "ShortOpt": "",
-                "Hide": 0,
-                "Required": false,
-                "IsPassword": false,
-                "NoPrefix": false,
-                "Advanced": true
-            }
-        ]
-    }
+    // {
+    //     "Name": "yandex",
+    //     "Description": "Yandex Disk",
+    //     "Prefix": "yandex",
+    //     "Options": [
+    //         {
+    //             "Name": "client_id",
+    //             "Help": "Yandex Client Id\nLeave blank normally.",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "client_secret",
+    //             "Help": "Yandex Client Secret\nLeave blank normally.",
+    //             "Provider": "",
+    //             "Default": "",
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": false
+    //         },
+    //         {
+    //             "Name": "unlink",
+    //             "Help": "Remove existing public link to file/folder with link command rather than creating.\nDefault is false, meaning link command will create or retrieve public link.",
+    //             "Provider": "",
+    //             "Default": false,
+    //             "Value": null,
+    //             "ShortOpt": "",
+    //             "Hide": 0,
+    //             "Required": false,
+    //             "IsPassword": false,
+    //             "NoPrefix": false,
+    //             "Advanced": true
+    //         }
+    //     ]
+    // }
 ];

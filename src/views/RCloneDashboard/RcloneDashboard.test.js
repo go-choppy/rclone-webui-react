@@ -1,4 +1,4 @@
-describe('Rclone Dashboard', function () {
+describe('SmartCDP Dashboard', function () {
     it('should render', function () {
         expect(1).toBe(1);
     });

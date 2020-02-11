@@ -270,7 +270,7 @@ class RunningJobs extends React.Component {
                     </Row>
                 );
             } else {
-                return (<div>Not connected to rclone.</div>)
+                return (<div>Not connected to smartcdp.</div>)
             }
 
         } else if (mode === "card") {
@@ -279,7 +279,7 @@ class RunningJobs extends React.Component {
                     <TransferringJobsRow transferring={transferring}/>
                 );
             } else {
-                return (<div>Not connected to rclone.</div>);
+                return (<div>Not connected to smartcdp.</div>);
             }
 
         } else if (mode === "modal") {
