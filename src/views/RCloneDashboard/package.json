@@ -1,5 +1,5 @@
 {
-  "name": "Rclone Dashboard",
+  "name": "SmartCDP Dashboard",
   "version": "0.0.0",
   "private": true,
   "main": "RCloneDashboard.js"
